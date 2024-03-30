@@ -64,12 +64,23 @@ const App = () => {
     },
   ]
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+  };
+
+  const onChange = (e) => {
+    setValues({...values, [e.target.name]: e.target.value});
+  }
+
   return <div className='App'>
-    <form>
-      {inputs.map(() => (
-      <FormInput  />
+    <form onSubmit = {handleSubmit}>
+      <h2>Factoring calculator</h2>
+      {inputs.map((input) => (
+      <FormInput key = {input.id} {...input} value = {values[input.name]} onChange = {onChange} />
       ))}
-    </form>
+      <button className="infoBtn" id="calculate">Calculate</button>
+      </form>
   </div>
 }
 
