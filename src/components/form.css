@@ -9,6 +9,14 @@ form{
     margin: auto;
 }
 
+.formField{
+    min-width: 70%;
+}
+
+.formResult{
+    align-content: center;
+}
+
 .formInput{
     width: auto;
     margin-bottom: 10px;
@@ -28,6 +36,12 @@ label{
     color: gray;
 }
 
+span{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
 
 input:invalid[focused="true"] ~ span{
     border: 1px solid red;
