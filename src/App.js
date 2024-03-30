@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css';
 import FormInput from './components/FormInput';
+import FormOutput from './components/FormOutput';
 
 const App = () => {
 
