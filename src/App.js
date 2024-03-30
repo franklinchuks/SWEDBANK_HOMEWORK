@@ -6,11 +6,11 @@ import FormOutput from './components/FormOutput';
 const App = () => {
 
   const [values, setValues] = useState({
-  invoiceAmount: 10000,
-  advanceRate: 90,
-  interestRate: 3,
-  paymentTerm: 30,
-  commFee: 0.3,
+  calc_d5: 10000,
+  calc_d6: 90,
+  calc_d7: 3,
+  calc_d8: 30,
+  calc_d9: 0.3,
   invoiceAmountPercent: "0",
   financingCharge: "0.00"
   });
@@ -36,7 +36,7 @@ const App = () => {
   const inputs = [
     {
       id: 1,
-      name: "invoiceAmount",
+      name: "calc_d5",
       type: "number",
       value: "10000",
       errorMessage: "Please fill out this field.",
@@ -45,7 +45,7 @@ const App = () => {
     },
     {
       id: 2,
-      name: "advanceRate",
+      name: "calc_d6",
       type: "number",
       label: "Advance rate",
       options: [
@@ -57,7 +57,7 @@ const App = () => {
     },
     {
       id: 3,
-      name: "interestRate",
+      name: "calc_d7",
       type: "number",
       errorMessage: "Please fill out this field.",
       label: "Interest rate",
@@ -65,7 +65,7 @@ const App = () => {
     },
     {
       id: 4,
-      name: "paymentTerm",
+      name: "calc_d8",
       type: "number",
       label: "Payment term",
       options: [
@@ -77,7 +77,7 @@ const App = () => {
     },
     {
       id: 5,
-      name: "commFee",
+      name: "calc_d9",
       type: "number",
       errorMessage: "Please fill out this field.",
       label: "Commission fee",
@@ -89,11 +89,11 @@ const App = () => {
     e.preventDefault();
   
     //Parse form input values to float
-    const invoiceAmount = parseFloat(values.invoiceAmount);
-    const advanceRate = parseFloat(values.advanceRate) / 100;
-    const interestRate = parseFloat(values.interestRate) / 100;
-    const paymentTerm = parseFloat(values.paymentTerm);
-    const commFee = parseFloat(values.commFee) / 100;
+    const invoiceAmount = parseFloat(values.calc_d5);
+    const advanceRate = parseFloat(values.calc_d6) / 100;
+    const interestRate = parseFloat(values.calc_d7) / 100;
+    const paymentTerm = parseFloat(values.calc_d8);
+    const commFee = parseFloat(values.calc_d9) / 100;
   
     //Perform calculation based on parsed values
     //amount advanced
@@ -125,7 +125,7 @@ const App = () => {
         {inputs.map((input) => (
         <FormInput key = {input.id} {...input} value = {values[input.name]} onChange = {onChange} />
         ))}
-        <button className="infoBtn" id="calculate">Calculate</button>
+        <button className="infoBtn" id="calculate-factoring">Calculate</button>
       </div>
 
       <div className="formResult">
