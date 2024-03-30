@@ -7,6 +7,16 @@
     opacity: 0.8;
   }
   
+  h2{
+    color: #330000;
+  }
+  
+  p{
+    font-size: 30px;
+    color: orangered;
+    font-weight: bolder;
+  }
+  
   button{
     display: flex;
     height: auto;
@@ -18,5 +28,20 @@
     margin: auto;
     font-weight: bold;
   }
-
+  
+  button:hover{
+    opacity: 0.8;
+  }
+  
+  button:active{
+    opacity: 1;
+  }
+  
+  .infoBtn{
+    background-color: cadetblue;
+  }
+  
+  .warningBtn{
+    background-color: orangered;
+  }
   
