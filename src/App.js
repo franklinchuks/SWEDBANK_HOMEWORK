@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './App.css';
+import FormInput from './components/FormInput';
 
 const App = () => {
 
@@ -64,7 +65,11 @@ const App = () => {
   ]
 
   return <div className='App'>
-    Hello...
+    <form>
+      {inputs.map(() => (
+      <FormInput  />
+      ))}
+    </form>
   </div>
 }
 
