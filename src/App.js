@@ -17,14 +17,14 @@ const App = () => {
 
   const labels = [
     {
-      id: 1,
+      id: "result_perc",
       name: "invoiceAmountPercent",
       type: "number",
       label: "Invoice Amount Percent",
       value: values.invoiceAmountPercent
     },
     {
-      id: 2,
+      id: "result",
       name: "financingCharge",
       type: "number",
       label: "Financing Charge",
